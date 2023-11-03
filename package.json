@@ -1,0 +1,38 @@
+{
+  "name": "rollup-plugin-extra-node-modules",
+  "version": "0.0.1",
+  "description": "",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "scripts": {
+    "build": "tsup src/index.ts --dts --format cjs,esm",
+    "test": "vitest"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/fs-extra": "^11.0.3",
+    "@types/invariant": "^2.2.36",
+    "@types/lodash": "^4.14.200",
+    "@types/node": "^20.8.10",
+    "@types/normalize-path": "^3.0.1",
+    "@types/semver": "^7.5.4",
+    "tsup": "^7.2.0",
+    "typescript": "^5.2.2",
+    "vitest": "^0.34.6"
+  },
+  "dependencies": {
+    "execa": "^5.1.1",
+    "fast-glob": "^3.3.1",
+    "fs-extra": "^11.1.1",
+    "invariant": "^2.2.4",
+    "lodash": "^4.17.21",
+    "normalize-path": "^3.0.0",
+    "semver": "^7.5.4",
+    "ts-dedent": "^2.2.0"
+  },
+  "peerDependencies": {
+    "rollup": "^4.2.0"
+  }
+}

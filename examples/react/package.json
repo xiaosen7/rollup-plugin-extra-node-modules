@@ -1,0 +1,25 @@
+{
+  "name": "lib",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "rollup -c"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@rollup/plugin-typescript": "^11.1.5",
+    "antd": "^5.10.3",
+    "react": "^18.2.0",
+    "rollup": "^4.2.0",
+    "rollup-plugin-extra-node-modules": "workspace:^"
+  },
+  "devDependencies": {
+    "@types/node": "^20.8.10",
+    "@types/react": "^18.2.34",
+    "tslib": "^2.6.2",
+    "typescript": "^5.2.2"
+  }
+}
