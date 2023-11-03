@@ -8,7 +8,16 @@
     "build": "tsup src/index.ts --dts --format cjs,esm",
     "test": "vitest"
   },
-  "keywords": [],
+  "keywords": [
+    "node modules",
+    "components",
+    "libs",
+    "react",
+    "modules",
+    "extract",
+    "rollup",
+    "rollup-plugin"
+  ],
   "author": "",
   "license": "ISC",
   "devDependencies": {
@@ -34,5 +43,12 @@
   },
   "peerDependencies": {
     "rollup": "^4.2.0"
-  }
+  },
+  "repository": {
+    "url": "https://github.com/xiaosen7/rollup-plugin-extra-node-modules/tree/main"
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ]
 }
