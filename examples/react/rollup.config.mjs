@@ -3,6 +3,7 @@ import { nodeModulesPlugin } from "rollup-plugin-extra-node-modules";
 import typescript from "@rollup/plugin-typescript";
 import { join } from "path";
 import { readFileSync } from "fs";
+import del from "rollup-plugin-delete";
 
 export default rollup.defineConfig({
   output: {
@@ -16,6 +17,8 @@ export default rollup.defineConfig({
     }),
     typescript({
       outDir: join("dist", "assets", "types"),
+      rootDir: "./src",
     }),
+    del({ targets: ["dist"] }),
   ],
 });

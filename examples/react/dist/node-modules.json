@@ -1,0 +1,22 @@
+[
+  {
+    "name": "components",
+    "version": "1.0.0"
+  },
+  {
+    "name": "components-button",
+    "version": "2.0.0"
+  },
+  {
+    "name": "chunks",
+    "version": "1.0.0"
+  },
+  {
+    "name": "assets",
+    "version": "4.0.0"
+  },
+  {
+    "name": "all-shared",
+    "version": "1.0.0"
+  }
+]

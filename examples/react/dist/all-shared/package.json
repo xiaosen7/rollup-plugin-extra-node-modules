@@ -1,0 +1,9 @@
+{
+  "name": "all-shared",
+  "version": "1.0.0",
+  "type": "module",
+  "dependencies": {
+    "components": "1.0.0",
+    "components-button": "2.0.0"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "name": "assets",
+  "version": "4.0.0",
+  "type": "module",
+  "sideEffects": false,
+  "dependencies": {}
+}
