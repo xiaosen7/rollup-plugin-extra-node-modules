@@ -2,7 +2,6 @@ import fs from "fs/promises";
 import path, { join } from "path";
 
 import { npmUtils } from "./utils";
-import invariant from "invariant";
 import _ from "lodash";
 
 import { PathToNameResolver, RollupHelper } from "./models";
@@ -52,6 +51,9 @@ export interface ISharedNodeModulePluginOptions {
    * Input files you want to build to node modules, support glob text.
    */
   input: string[];
+  /**
+   * @default "dist"
+   */
   outDir: string;
   /**
    * Whether or not to write dts file with per js files, this option need you provide typescript plugin and build declaration files into assets node module types directory.
@@ -74,7 +76,7 @@ export async function nodeModulesPlugin(
     allSharedModuleName = "all-shared",
     overrideNames,
     input,
-    outDir,
+    outDir = "dist",
     writeDts = true,
   } = options;
 
@@ -114,9 +116,6 @@ export async function nodeModulesPlugin(
      * @param bundle
      */
     async generateBundle(options, bundle) {
-      const outDir = options.dir;
-      invariant(outDir, `Expect output dir to be define.`);
-
       // 打包时各个入口文件的公共部分会被 Rollup 生成 chunk
       const chunkNodeModule = new ChunksNodeModule({
         name: prefixedChunksModuleName,

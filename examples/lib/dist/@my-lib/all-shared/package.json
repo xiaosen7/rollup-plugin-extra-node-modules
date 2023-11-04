@@ -1,0 +1,8 @@
+{
+  "name": "@my-lib/all-shared",
+  "version": "1.0.0",
+  "type": "module",
+  "dependencies": {
+    "@my-lib/utils-add": "1.0.0"
+  }
+}

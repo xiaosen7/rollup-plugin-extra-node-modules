@@ -12,13 +12,15 @@ export class RollupHelper {
   constructor(private map: NodeModuleMap, private npmPrefix: string) {}
 
   getInput() {
-    return this.map.toArray().reduce((acc, [sharedName, nodeModule]) => {
-      if (nodeModule.isShared()) {
-        acc[sharedName] = nodeModule.asShared().sourceFilePath;
-      }
+    return this.map
+      .filterSharedModules()
+      .reduce((acc, [sharedName, nodeModule]) => {
+        if (nodeModule.isShared()) {
+          acc[sharedName] = nodeModule.sourceFilePath;
+        }
 
-      return acc;
-    }, {} as Record<string, string>);
+        return acc;
+      }, {} as Record<string, string>);
   }
 
   async transformOutput(output: rollup.OutputChunk) {

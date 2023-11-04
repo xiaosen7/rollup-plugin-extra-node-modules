@@ -1,0 +1,9 @@
+{
+  "name": "@my-lib/chunks",
+  "version": "1.0.0",
+  "type": "module",
+  "sideEffects": false,
+  "dependencies": {
+    "@my-lib/assets": "1.0.0"
+  }
+}
